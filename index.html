@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <title>Sorteio</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Sorteio</h1>
+
+    <div class="buttons">
+      <button id="show">Ver</button>
+      <button id="random">Sortear</button>
+      <button id="delete">Apagar</button>
+      <button id="copy">Copiar</button>
+    </div>
+
+    <form>
+      <p id="itensList"></p>
+      <input type="text" id="inputItem">
+      <button id="add">Adicionar item </button>
+    </form>
+
+    <div id="clock" class="clock"></div>
+
+    <div id="box-result" class="box-result">
+      <p id="result"></p>
+      <p id="resultList"></p>
+    </div>
+  </div>
+
+  <script src="main.js"> </script>
+</body>
+
+</html>
