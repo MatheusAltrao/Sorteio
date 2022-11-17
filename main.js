@@ -23,6 +23,7 @@ document.getElementById('show').addEventListener('click', () => {
 
     return
   }
+
   resultList.innerText = ''
   boxResult.classList.add('show')
   result.innerText = arrNames
@@ -133,7 +134,7 @@ document.getElementById('add').addEventListener('click', (ev) => {
 
   inputItem.value = ''
 
-
+  boxResult.classList.remove('show')
   itensList.innerText = "Quantidade é " + arrNames.length
 })
 
