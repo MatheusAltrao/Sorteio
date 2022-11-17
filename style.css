@@ -8,6 +8,10 @@ body * {
   font-family: 'Poppins', sans-serif;
 }
 
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   background-color: #1a1a1a;
   color: #fff;
@@ -24,6 +28,10 @@ body {
   margin-top: 3rem;
 
   padding: 10px;
+}
+
+h1 {
+  text-transform: uppercase;
 }
 
 .buttons {
@@ -105,6 +113,7 @@ form input {
 }
 
 .clock {
+  margin-top: 1rem;
   display: none;
   font-size: 30px;
   color: var(--bg-color);

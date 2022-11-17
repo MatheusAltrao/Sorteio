@@ -50,7 +50,7 @@ document.getElementById('random').addEventListener('click', () => {
 
 
   Toastify({
-    text: "Sorteio realizado 🤩😜",
+    text: "Contagem regressiva🤩😜",
     duration: 3000,
     style: {
       background: "#7c17b4",
@@ -62,7 +62,7 @@ document.getElementById('random').addEventListener('click', () => {
 
   setTimeout(() => {
     boxResult.classList.add('show')
-    resultList.innerText = ramdomArr
+    resultList.innerText = "O sortudo da vez é:  " + ramdomArr
   }, 5000)
 
 
@@ -97,6 +97,9 @@ document.getElementById('delete').addEventListener('click', () => {
 
 
   itensList.innerText = "Quantidade é " + arrNames.length
+
+  resultList.innerText = ''
+  clock.classList.remove('show')
 
 })
 
@@ -153,7 +156,7 @@ document.getElementById('copy').addEventListener('click', (ev) => {
 
   navigator.clipboard.writeText(arrNames)
   Toastify({
-    text: "Copiado!",
+    text: "Lista Copiada!",
     duration: 2000,
     style: {
       background: "#7c17b4",
