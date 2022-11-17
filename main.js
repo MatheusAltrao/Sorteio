@@ -10,6 +10,8 @@ itensList.innerText = "Quantidade é " + arrNames.length
 
 
 document.getElementById('show').addEventListener('click', () => {
+  clear()
+
   clock.classList.remove('show')
 
   if (arrNames == '') {
@@ -24,7 +26,7 @@ document.getElementById('show').addEventListener('click', () => {
     return
   }
 
-  resultList.innerText = ''
+
   boxResult.classList.add('show')
   result.innerText = arrNames
 
@@ -32,10 +34,10 @@ document.getElementById('show').addEventListener('click', () => {
 
 document.getElementById('random').addEventListener('click', () => {
 
-
+  clear()
 
   const ramdomArr = arrNames[Math.floor(Math.random() * arrNames.length)]
-  result.innerHTML = ''
+
 
   if (arrNames == '' || arrNames.length === 1) {
     Toastify({
@@ -96,11 +98,9 @@ document.getElementById('delete').addEventListener('click', () => {
     },
   }).showToast();
 
+  clear()
 
   itensList.innerText = "Quantidade é " + arrNames.length
-
-  resultList.innerText = ''
-  clock.classList.remove('show')
 
 })
 
@@ -132,9 +132,10 @@ document.getElementById('add').addEventListener('click', (ev) => {
     },
   }).showToast();
 
-  inputItem.value = ''
 
-  boxResult.classList.remove('show')
+  clear()
+
+
   itensList.innerText = "Quantidade é " + arrNames.length
 })
 
@@ -164,5 +165,14 @@ document.getElementById('copy').addEventListener('click', (ev) => {
     },
   }).showToast();
 
+  clear()
+
 })
 
+
+function clear() {
+  inputItem.value = ''
+  boxResult.classList.remove('show')
+  resultList.innerText = ''
+  clock.classList.remove('show')
+}
